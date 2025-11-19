@@ -41,9 +41,17 @@ Given the following upregulated marker genes for single-cell cluster in a PBMC d
 ```
 ## 2. Build Your Own MCP Server
 
-We use our [cookiecutter MCP server template](https://github.com/biocontext-ai/mcp-server-template). The task is to build an AnnData MCP server that can extract marker gene information for a cluster/cell type of interest from an AnnData `h5ad` file.
+Get started by using our [cookiecutter MCP server template](https://github.com/biocontext-ai/mcp-server-cookiecutter):
+
+```bash
+uvx cookiecutter https://github.com/biocontext-ai/mcp-server-cookiecutter.git
+```
+
+The task is to build an AnnData MCP server that can extract marker gene information for a cluster/cell type of interest from an AnnData `h5ad` file. You can generate the data by running the `notebooks/prepare_data.ipynb` notebook.
 
 You can find the reference implementation [here](https://github.com/dschaub95/anndata-mcp-workshop).
+
+You can find our "official" BioContextAI AnnData MCP server [here](https://github.com/biocontext-ai/anndata-mcp). It provides few but very versatile tools and always utilizes lazy data reading via the `read_lazy` function (amazing work by Ilan Gold).
 
 ## 3. Submit Your MCP Server
 
@@ -74,3 +82,9 @@ Add the following configuration to your Cursor/VSCode settings (`mcp.json`):
 ```
 
 Replace `path/to/your-mcp-server` with the path to your MCP server implementation and `your-mcp-server` with your actual server name.
+
+## 5. Test Your MCP Server with Claude Code
+
+You can test your MCP server with Claude Code by running the `notebooks/claude-code.ipynb` notebook.
+
+This notebook uses the [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python) to interact with your MCP server.

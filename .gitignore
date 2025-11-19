@@ -49,3 +49,4 @@ ENV/
 Thumbs.db
 
 data/*
+working_dir/*
