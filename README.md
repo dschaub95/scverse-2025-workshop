@@ -1,8 +1,6 @@
 # scverse conference 2025 workshop
 
-This workshop provides a hands-on introduction to building and utilizing biomedical MCP servers as well contributing them to the [BioContextAI MCP registry](https://biocontext.ai/registry).
-
-## Setup
+This workshop provides a hands-on introduction to building and utilizing biomedical MCP servers as well contributing them to BioContextAI registry [https://biocontext.ai/registry](https://biocontext.ai/registry). Find our paper [here](https://www.nature.com/articles/s41587-025-02900-9). You can also find all links on the BioContextAI website [https://biocontext.ai](https://biocontext.ai).
 
 We will be using [uv](https://github.com/astral-sh/uv) Python package management throughout the workshop.
 
@@ -29,16 +27,19 @@ We will be using [uv](https://github.com/astral-sh/uv) Python package management
    uv run python script.py
    ```
 
-To follow along it would also be good to have an MCP client such as [Cursor](https://www.cursor.com/) or [VSCode](https://code.visualstudio.com/) installed.
+To follow along you should also have an MCP client such as [Cursor](https://www.cursor.com/) or [VSCode](https://code.visualstudio.com/) installed.
 
 ## 1. MCP Servers in Action
 
-See MCP servers in action at [biocontext.ai/chat](https://biocontext.ai/chat). You will be given an API key but the amount of tokens is limited, so please be mindful of your usage.
+See MCP servers in action at [https://biocontext.ai/chat](https://biocontext.ai/chat). You will be given an API key but the amount of tokens is limited, so please be mindful of your usage.
 
 Example query:
 ```
 Given the following upregulated marker genes for single-cell cluster in a PBMC dataset, what cell type could this cluster be? Marker genes: NKG7, GZMB, GNLY, PRF1, CTSW. Make sure to use your available tools and analyze what cell type each gene could belong to. Output a summary of your analysis.
 ```
+
+You can explore our registry here [https://biocontext.ai/registry](https://biocontext.ai/registry).
+
 ## 2. Build Your Own MCP Server
 
 Get started by using our [cookiecutter MCP server template](https://github.com/biocontext-ai/mcp-server-cookiecutter):
